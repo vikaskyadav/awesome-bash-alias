@@ -2,6 +2,7 @@
 A curated list of awesome Bash aliases. 
 
 
+alias bc="bc -l"
 
 alias c="clear"
 alias cl="clear"
@@ -54,6 +55,7 @@ alias gall="git add ."
 alias gc="git commit -m"
 alias go="git push -u origin"
 
+alias h="history"
 alias h1="history 10" 
 alias h2="history 20" 
 alias h3="history 30" 
@@ -61,7 +63,12 @@ alias h3="history 30"
 alias l="ls"
 alias ls="ls -a"
 alias la="ls -a"
+alias ll="ls -al"
 
+alias mount="mount | column -t"
+
+alias pg="ping google.com -c 5"
+alias pt="ping facebook.com -c 5"
 
 
 
@@ -71,4 +78,5 @@ alias xt="exit"
 alias by="exit"
 alias bye="exit"
 alias die="exit"
+
 
