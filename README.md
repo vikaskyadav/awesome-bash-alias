@@ -1,27 +1,28 @@
 # awesome-bash-alias
 A curated list of awesome Bash aliases. 
 
-__ 
-alias bc="bc -l"
-
-alias c="clear"
-
-alias cl="clear"
-
-alias ckear="clear"
-
-alias clr="clear"
+__## Clear Command__
 
 
-alias .="cd .."
+* alias c="clear"
 
-alias ..="cd ../.."
+* alias cl="clear"
 
-alias ...="cd ../../.."
+* alias ckear="clear"
 
-alias ....="cd ../../../.."
+* alias clr="clear"
 
-alias .....="cd ../../../../.."
+__## Change directory__
+
+* alias .="cd .."
+
+* alias ..="cd ../.."
+
+* alias ...="cd ../../.."
+
+* alias ....="cd ../../../.."
+
+* alias .....="cd ../../../../.."
 
 
 alias ..="cd .."
