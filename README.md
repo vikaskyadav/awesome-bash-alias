@@ -157,16 +157,21 @@ __# Get GPU ram on desktop / laptop__
 * alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
 
 __# Resume wget by default__
+
 * alias wget="wget -c" 
 
-__# Grabs the disk usage in the current directory
+__# Grabs the disk usage in the current directory__
+
 * alias usage='du -ch | grep total'
 
-__# Gets the total disk usage on your machine
+__# Gets the total disk usage on your machine__
+
 * alias totalusage='df -hl --total | grep total'
 
-__# Shows the individual partition usages without the temporary memory values
+__# Shows the individual partition usages without the temporary memory values__
+
 * alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
 
-__# Gives you what is using the most space. Both directories and files. Varies on current directory
+__# Gives you what is using the most space. Both directories and files. Varies on current directory__
+
 * alias most='du -hsx * | sort -rh | head -10'
