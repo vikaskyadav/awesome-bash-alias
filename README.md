@@ -38,6 +38,28 @@ __# Change Directories__
 * alias cd..="cd .." 
 * alias cd...="cd ../.." 
 * alias cd....="cd ../../.." 
+
+__# useful Docker functions__
+
+* dock-run()  { sudo docker run -i -t --privileged $@ ;}
+* dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
+* dock-log()  { sudo docker logs --tail=all -f $@ ;}
+* dock-port() { sudo docker port $@ ;}
+* dock-vol()  { sudo docker inspect --format '{{ .Volumes }}' $@ ;}
+* dock-ip()   { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
+* dock-rmc()  { sudo docker rm `sudo docker ps -qa --filter 'status=exited'` ;}
+* dock-rmi()  { sudo docker rmi -f `sudo docker images | grep '^<none>' | awk '{print $3}'` ;}
+
+*dock-do() {
+   if [ "$#" -ne 1 ]; then
+      echo "Usage: $0 start|stop|pause|unpause|<any valid docker cmd>"
+   fi
+
+   for c in $(sudo docker ps -a | awk '{print $1}' | sed "1 d")
+   do
+       sudo docker $1 $c
+   done
+}
 * alias cd.....="cd ../../../.." 
 * alias cd......="cd ../../../../.." 
 
