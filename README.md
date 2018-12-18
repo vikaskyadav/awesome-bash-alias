@@ -1,6 +1,8 @@
 # awesome-bash-alias
 A curated list of awesome Bash aliases. 
 
+Website: https://vikaskyadav.github.io/awesome-bash-alias/
+
 
 * alias bc="bc -l"
 
