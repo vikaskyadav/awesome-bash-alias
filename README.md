@@ -90,7 +90,7 @@ __# Git commands__
 * alias gchckout="git checkout"
 * alias gckout="git checkout"
 * alias go="git push -u origin"
-
+* alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 __# History commands__
 
 * alias h="history"
