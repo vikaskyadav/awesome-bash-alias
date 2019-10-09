@@ -59,8 +59,8 @@ __# useful Docker functions__
 * dock-ip()   { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
 * dock-rmc()  { sudo docker rm `sudo docker ps -qa --filter 'status=exited'` ;}
 * dock-rmi()  { sudo docker rmi -f `sudo docker images | grep '^<none>' | awk '{print $3}'` ;}
-* dock-stop() { docker stop $(docker ps -a -q); }
-* dock-rm()   { docker rm $(docker ps -a -q); }
+* dock-stop() { sudo docker stop $(docker ps -a -q); }
+* dock-rm()   { sudo docker rm $(docker ps -a -q); }
 
 *dock-do() {
    if [ "$#" -ne 1 ]; then
@@ -82,15 +82,14 @@ __# Kubernetes commands__
 * alias kex="kubectl exec -i -t"
 
 __# Docker commands__
-* alias k="kubectl"
-* alias dl="docker ps -l -q"
-* alias dps="docker ps"
-* alias di="docker images"
-* alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-* alias dkd="docker run -d -P"
-* alias dki="docker run -i -t -P"
-* alias dex="docker exec -i -t"
-* alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+* alias dl="sudo docker ps -l -q"
+* alias dps="sudo docker ps"
+* alias di="sudo docker images"
+* alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+* alias dkd="sudo docker run -d -P"
+* alias dki="sudo docker run -i -t -P"
+* alias dex="sudo docker exec -i -t"
+* alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
 
 __# Estimate file space usage to maximum depth__
 
