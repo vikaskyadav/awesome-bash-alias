@@ -40,6 +40,14 @@ __# Change Directories__
 * alias cd..="cd .." 
 * alias cd...="cd ../.." 
 * alias cd....="cd ../../.." 
+* alias cd.....="cd ../../../.." 
+* alias cd......="cd ../../../../.." 
+
+* alias cd1="cd .." 
+* alias cd2="cd ../.." 
+* alias cd3="cd ../../.." 
+* alias cd4="cd ../../../.." 
+* alias cd5="cd ../../../../.." 
 
 __# useful Docker functions__
 
@@ -51,6 +59,8 @@ __# useful Docker functions__
 * dock-ip()   { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
 * dock-rmc()  { sudo docker rm `sudo docker ps -qa --filter 'status=exited'` ;}
 * dock-rmi()  { sudo docker rmi -f `sudo docker images | grep '^<none>' | awk '{print $3}'` ;}
+* dock-stop() { docker stop $(docker ps -a -q); }
+* dock-rm()   { docker rm $(docker ps -a -q); }
 
 *dock-do() {
    if [ "$#" -ne 1 ]; then
@@ -62,14 +72,25 @@ __# useful Docker functions__
        sudo docker $1 $c
    done
 }
-* alias cd.....="cd ../../../.." 
-* alias cd......="cd ../../../../.." 
+__# Kubernetes commands__
+* alias k="kubectl"
+* alias kg="kubectl get"
+* alias kga="kubectl get all"
+* alias kgall="kubectl get all --all-namespaces"
+* alias ka="kubectl apply -f"
+* alias klo="kubectl logs -f"
+* alias kex="kubectl exec -i -t"
 
-* alias cd1="cd .." 
-* alias cd2="cd ../.." 
-* alias cd3="cd ../../.." 
-* alias cd4="cd ../../../.." 
-* alias cd5="cd ../../../../.." 
+__# Docker commands__
+* alias k="kubectl"
+* alias dl="docker ps -l -q"
+* alias dps="docker ps"
+* alias di="docker images"
+* alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+* alias dkd="docker run -d -P"
+* alias dki="docker run -i -t -P"
+* alias dex="docker exec -i -t"
+* alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 __# Estimate file space usage to maximum depth__
 
