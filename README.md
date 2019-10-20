@@ -3,7 +3,7 @@ A curated list of awesome Bash aliases.
 
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
-
+__# Calculator__
 * alias bc="bc -l"
 
 __# Clear__
@@ -18,6 +18,8 @@ __# Change Directories__
 * alias ...="cd ../../.."
 * alias ....="cd ../../../.."
 * alias .....="cd ../../../../.."
+
+### OR
 
 * alias ..="cd .."
 * alias ...="cd ../.."
@@ -72,20 +74,23 @@ __# useful Docker functions__
        sudo docker $1 $c
    done
 }
+
 __# Kubernetes commands__
+
 * alias k="kubectl"
+* alias ka="kubectl apply -f"
+* alias kex="kubectl exec -i -t"
 * alias kg="kubectl get"
 * alias kga="kubectl get all"
 * alias kgall="kubectl get all --all-namespaces"
-* alias ka="kubectl apply -f"
+* alias kinfo="kubectl cluster-info"
 * alias klo="kubectl logs -f"
-* alias kex="kubectl exec -i -t"
+* alias kn="kubectl get nodes"
 * alias kpv="kubectl get pv"
 * alias kpvc="kubectl get pvc"
-* alias kinfo="kubectl cluster-info"
-* alias kn="kubectl get nodes"
 
 __# Docker commands__
+
 * alias dl="sudo docker ps -l -q"
 * alias dps="sudo docker ps"
 * alias di="sudo docker images"
@@ -115,6 +120,7 @@ __# Git commands__
 * alias gckout="git checkout"
 * alias go="git push -u origin"
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 __# History commands__
 
 * alias h="history"
@@ -198,7 +204,7 @@ __# Get server cpu info__
 
 * alias cpuinfo="lscpu"
 
-__# older system use /proc/cpuinfo__
+__# Older system use /proc/cpuinfo__
 
 * alias cpuinfo="less /proc/cpuinfo"
 
