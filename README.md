@@ -1,5 +1,5 @@
 # awesome-bash-alias
-A curated list of awesome Bash aliases. 
+A curated list of awesome Bash aliases.
 
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
@@ -20,34 +20,34 @@ __# Change Directories__
 * alias .....="cd ../../../../.."
 
 * alias ..="cd .."
-* alias ...="cd ../.." 
-* alias ....="cd ../../.." 
-* alias .....="cd ../../../.." 
-* alias ......="cd ../../../../.." 
+* alias ...="cd ../.."
+* alias ....="cd ../../.."
+* alias .....="cd ../../../.."
+* alias ......="cd ../../../../.."
 
 * alias .1="cd .."
-* alias .2="cd ../.." 
-* alias .3="cd ../../.." 
-* alias .4="cd ../../../.." 
+* alias .2="cd ../.."
+* alias .3="cd ../../.."
+* alias .4="cd ../../../.."
 * alias .5="cd ../../../../.."
 
 * alias ..1="cd .."
-* alias ..2="cd ../.." 
-* alias ..3="cd ../../.." 
-* alias ..4="cd ../../../.." 
-* alias ..5="cd ../../../../.." 
+* alias ..2="cd ../.."
+* alias ..3="cd ../../.."
+* alias ..4="cd ../../../.."
+* alias ..5="cd ../../../../.."
 
-* alias cd..="cd .." 
-* alias cd...="cd ../.." 
-* alias cd....="cd ../../.." 
-* alias cd.....="cd ../../../.." 
-* alias cd......="cd ../../../../.." 
+* alias cd..="cd .."
+* alias cd...="cd ../.."
+* alias cd....="cd ../../.."
+* alias cd.....="cd ../../../.."
+* alias cd......="cd ../../../../.."
 
-* alias cd1="cd .." 
-* alias cd2="cd ../.." 
-* alias cd3="cd ../../.." 
-* alias cd4="cd ../../../.." 
-* alias cd5="cd ../../../../.." 
+* alias cd1="cd .."
+* alias cd2="cd ../.."
+* alias cd3="cd ../../.."
+* alias cd4="cd ../../../.."
+* alias cd5="cd ../../../../.."
 
 __# useful Docker functions__
 
@@ -80,6 +80,10 @@ __# Kubernetes commands__
 * alias ka="kubectl apply -f"
 * alias klo="kubectl logs -f"
 * alias kex="kubectl exec -i -t"
+* alias kpv="kubectl get pv"
+* alias kpvc="kubectl get pvc"
+* alias kinfo="kubectl cluster-info"
+* alias kn="kubectl get nodes"
 
 __# Docker commands__
 * alias dl="sudo docker ps -l -q"
@@ -114,9 +118,9 @@ __# Git commands__
 __# History commands__
 
 * alias h="history"
-* alias h1="history 10" 
-* alias h2="history 20" 
-* alias h3="history 30" 
+* alias h1="history 10"
+* alias h2="history 20"
+* alias h3="history 30"
 
 __# List commands__
 
@@ -144,14 +148,14 @@ __# Exit Command__
 __# Launch Simple HTTP Server__
 
 * alias serve='python -m SimpleHTTPServer'
- 
+
 __# Confirmation__
 
 * alias mv='mv -i'
 * alias cp='cp -i'
 * alias ln='ln -i'
 * alias rm='rm -I --preserve-root'
- 
+
 __# Parenting changing perms on /__
 
 * alias chown='chown --preserve-root'
@@ -179,32 +183,32 @@ __# System state__
 __# Free and Used__
 
 * alias meminfo="free -m -l -t"
- 
+
 __# Get top process eating memory__
 
 * alias psmem="ps auxf | sort -nr -k 4"
 * alias psmem10="ps auxf | sort -nr -k 4 | head -10"
- 
+
 __# Get top process eating cpu__
 
 * alias pscpu="ps auxf | sort -nr -k 3"
 * alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
- 
+
 __# Get server cpu info__
 
 * alias cpuinfo="lscpu"
- 
+
 __# older system use /proc/cpuinfo__
 
 * alias cpuinfo="less /proc/cpuinfo"
- 
+
 __# Get GPU ram on desktop / laptop__
 
 * alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
 
 __# Resume wget by default__
 
-* alias wget="wget -c" 
+* alias wget="wget -c"
 
 __# Grabs the disk usage in the current directory__
 
