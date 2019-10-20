@@ -102,6 +102,7 @@ __# Estimate file space usage to maximum depth__
 __# Git commands__
 
 * alias gs="git status"
+* alias gst="git status -sb"
 * alias gl="git log"
 * alias ga="git add"
 * alias gaa="git add -A"
@@ -115,6 +116,7 @@ __# Git commands__
 * alias gckout="git checkout"
 * alias go="git push -u origin"
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+* alias nah="git clean -df && git checkout -- ."
 __# History commands__
 
 * alias h="history"
