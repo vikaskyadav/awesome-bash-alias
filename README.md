@@ -115,6 +115,8 @@ __# Git commands__
 * alias gchckout="git checkout"
 * alias gckout="git checkout"
 * alias go="git push -u origin"
+* alias gsh='git stash'
+* alias gw='git whatchanged'
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 * alias nah="git clean -df && git checkout -- ."
 __# History commands__
@@ -127,6 +129,7 @@ __# History commands__
 __# List commands__
 
 * alias l="ls"
+* alias l='ls -lAh'
 * alias ls="ls -a"
 * alias la="ls -a"
 * alias ll="ls -al"
@@ -146,6 +149,7 @@ __# Exit Command__
 * alias by="exit"
 * alias bye="exit"
 * alias die="exit"
+* alias quit="exit"
 
 __# Launch Simple HTTP Server__
 
