@@ -225,3 +225,8 @@ __# Shows the individual partition usages without the temporary memory values__
 __# Gives you what is using the most space. Both directories and files. Varies on current directory__
 
 * alias most='du -hsx * | sort -rh | head -10'
+
+__# MacOs commands__
+
+* alias rp='. ~/.bash_profile'
+* alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
