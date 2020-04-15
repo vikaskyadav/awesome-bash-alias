@@ -3,7 +3,7 @@ A curated list of awesome Bash aliases.
 
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
-
+__# Calculator__
 * alias bc="bc -l"
 
 __# Clear__
@@ -18,6 +18,8 @@ __# Change Directories__
 * alias ...="cd ../../.."
 * alias ....="cd ../../../.."
 * alias .....="cd ../../../../.."
+
+### OR
 
 * alias ..="cd .."
 * alias ...="cd ../.."
@@ -72,20 +74,28 @@ __# useful Docker functions__
        sudo docker $1 $c
    done
 }
+
 __# Kubernetes commands__
+
 * alias k="kubectl"
+* alias ka="kubectl apply -f"
+* alias kpa="kubectl patch -f"
+* alias ked="kubectl edit"
+* alias ksc="kubectl scale"
+* alias kex="kubectl exec -i -t"
 * alias kg="kubectl get"
 * alias kga="kubectl get all"
 * alias kgall="kubectl get all --all-namespaces"
-* alias ka="kubectl apply -f"
+* alias kinfo="kubectl cluster-info"
+* alias kdesc="kubectl describe"
+* alias ktp="kubectl top"
 * alias klo="kubectl logs -f"
-* alias kex="kubectl exec -i -t"
+* alias kn="kubectl get nodes"
 * alias kpv="kubectl get pv"
 * alias kpvc="kubectl get pvc"
-* alias kinfo="kubectl cluster-info"
-* alias kn="kubectl get nodes"
 
 __# Docker commands__
+
 * alias dl="sudo docker ps -l -q"
 * alias dps="sudo docker ps"
 * alias di="sudo docker images"
@@ -119,12 +129,14 @@ __# Git commands__
 * alias gw='git whatchanged'
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 * alias nah="git clean -df && git checkout -- ."
+
 __# History commands__
 
 * alias h="history"
 * alias h1="history 10"
 * alias h2="history 20"
 * alias h3="history 30"
+* alias hgrep='history | grep'
 
 __# List commands__
 
@@ -184,7 +196,12 @@ __# System state__
 * alias poweroff="sudo /sbin/poweroff"
 * alias halt="sudo /sbin/halt"
 * alias shutdown="sudo /sbin/shutdown"
+* alias flighton='sudo rfkill block all'
+* alias flightoff='sudo rfkill unblock all'
+* alias snr='sudo service network-manager restart'
 
+__# Show open ports__
+* alias ports='sudo netstat -tulanp'
 
 __# Free and Used__
 
@@ -200,11 +217,14 @@ __# Get top process eating cpu__
 * alias pscpu="ps auxf | sort -nr -k 3"
 * alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
 
+__# Get details of a process__
+* alias paux='ps aux | grep'
+
 __# Get server cpu info__
 
 * alias cpuinfo="lscpu"
 
-__# older system use /proc/cpuinfo__
+__# Older system use /proc/cpuinfo__
 
 * alias cpuinfo="less /proc/cpuinfo"
 
@@ -231,3 +251,8 @@ __# Shows the individual partition usages without the temporary memory values__
 __# Gives you what is using the most space. Both directories and files. Varies on current directory__
 
 * alias most='du -hsx * | sort -rh | head -10'
+
+__# MacOs commands__
+
+* alias rp='. ~/.bash_profile'
+* alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
