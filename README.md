@@ -132,6 +132,7 @@ __# History commands__
 * alias h1="history 10"
 * alias h2="history 20"
 * alias h3="history 30"
+* alias hgrep='history | grep'
 
 __# List commands__
 
@@ -189,7 +190,12 @@ __# System state__
 * alias poweroff="sudo /sbin/poweroff"
 * alias halt="sudo /sbin/halt"
 * alias shutdown="sudo /sbin/shutdown"
+* alias flighton='sudo rfkill block all'
+* alias flightoff='sudo rfkill unblock all'
+* alias snr='sudo service network-manager restart'
 
+__# Show open ports__
+* alias ports='sudo netstat -tulanp'
 
 __# Free and Used__
 
@@ -204,6 +210,9 @@ __# Get top process eating cpu__
 
 * alias pscpu="ps auxf | sort -nr -k 3"
 * alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
+
+__# Get details of a process__
+* alias paux='ps aux | grep'
 
 __# Get server cpu info__
 
