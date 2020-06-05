@@ -3,6 +3,11 @@ A curated list of awesome Bash aliases.
 
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
+__# AWS CLI__
+* alias awstb='f(){ aws "$@" --output table; unset -f f; }; f'
+* alias awstx='f(){ aws "$@" --output text; unset -f f; }; f'
+* alias awsjs='f(){ aws "$@" --output json; unset -f f; }; f'
+
 __# Calculator__
 * alias bc="bc -l"
 
