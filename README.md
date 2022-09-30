@@ -4,23 +4,29 @@ A curated list of awesome Bash aliases.
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
 __# Calculator__
+```bash
 * alias bc="bc -l"
+```
 
 __# Clear__
+```bash
 * alias c="clear"
 * alias cl="clear"
 * alias ckear="clear"
 * alias clr="clear"
+```
 
 __# Change Directories__
+```bash
 * alias .="cd .."
 * alias ..="cd ../.."
 * alias ...="cd ../../.."
 * alias ....="cd ../../../.."
 * alias .....="cd ../../../../.."
+```
 
 ### OR
-
+```bash
 * alias ..="cd .."
 * alias ...="cd ../.."
 * alias ....="cd ../../.."
@@ -50,9 +56,10 @@ __# Change Directories__
 * alias cd3="cd ../../.."
 * alias cd4="cd ../../../.."
 * alias cd5="cd ../../../../.."
+```
 
 __# useful Docker functions__
-
+```bash
 * dock-run()  { sudo docker run -i -t --privileged $@ ;}
 * dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
 * dock-log()  { sudo docker logs --tail=all -f $@ ;}
@@ -74,9 +81,10 @@ __# useful Docker functions__
        sudo docker $1 $c
    done
 }
+```
 
 __# Kubernetes commands__
-
+```bash
 * alias k="kubectl"
 * alias ka="kubectl apply -f"
 * alias kpa="kubectl patch -f"
@@ -93,9 +101,10 @@ __# Kubernetes commands__
 * alias kn="kubectl get nodes"
 * alias kpv="kubectl get pv"
 * alias kpvc="kubectl get pvc"
+```
 
 __# Docker commands__
-
+```bash
 * alias dl="sudo docker ps -l -q"
 * alias dps="sudo docker ps"
 * alias di="sudo docker images"
@@ -104,13 +113,15 @@ __# Docker commands__
 * alias dki="sudo docker run -i -t -P"
 * alias dex="sudo docker exec -i -t"
 * alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
+```
 
 __# Estimate file space usage to maximum depth__
-
+```bash
 * alias du1="du -d 1"
+```
 
 __# Git commands__
-
+```bash
 * alias gs="git status"
 * alias gst="git status -sb"
 * alias gl="git log"
@@ -129,32 +140,36 @@ __# Git commands__
 * alias gw='git whatchanged'
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 * alias nah="git clean -df && git checkout -- ."
+```
 
 __# History commands__
-
+```bash
 * alias h="history"
 * alias h1="history 10"
 * alias h2="history 20"
 * alias h3="history 30"
 * alias hgrep='history | grep'
+```
 
 __# List commands__
-
+```bash
 * alias l="ls"
 * alias l='ls -lAh'
 * alias ls="ls -a"
 * alias la="ls -a"
 * alias ll="ls -al"
+```
 
 __# Ping Commands__
-
+```bash
 * alias pg="ping google.com -c 5"
 * alias pt="ping facebook.com -c 5"
 * alias ping="ping -c 5"
 * alias fastping="ping -c 100 -s.2"
+```
 
 __# Exit Command__
-
+```bash
 * alias :q="exit"
 * alias ext="exit"
 * alias xt="exit"
@@ -162,26 +177,29 @@ __# Exit Command__
 * alias bye="exit"
 * alias die="exit"
 * alias quit="exit"
+```
 
 __# Launch Simple HTTP Server__
-
+```bash
 * alias serve='python -m SimpleHTTPServer'
+```
 
 __# Confirmation__
-
+```bash
 * alias mv='mv -i'
 * alias cp='cp -i'
 * alias ln='ln -i'
 * alias rm='rm -I --preserve-root'
+```
 
 __# Parenting changing perms on /__
-
+```bash
 * alias chown='chown --preserve-root'
 * alias chmod='chmod --preserve-root'
 * alias chgrp='chgrp --preserve-root'
-
+```
 __# Install & Update utilties__
-
+```bash
 * alias sai="sudo apt install"
 * alias sai="sudo apt-get install"
 * alias sau="sudo apt update"
@@ -189,9 +207,9 @@ __# Install & Update utilties__
 * alias update="sudo apt update"
 * alias update="yum update"
 * alias updatey="yum -y update"
-
+```
 __# System state__
-
+```bash
 * alias reboot="sudo /sbin/reboot"
 * alias poweroff="sudo /sbin/poweroff"
 * alias halt="sudo /sbin/halt"
@@ -199,60 +217,63 @@ __# System state__
 * alias flighton='sudo rfkill block all'
 * alias flightoff='sudo rfkill unblock all'
 * alias snr='sudo service network-manager restart'
-
+```
 __# Show open ports__
+```bash
 * alias ports='sudo netstat -tulanp'
-
+```
 __# Free and Used__
-
+```bash
 * alias meminfo="free -m -l -t"
-
+```
 __# Get top process eating memory__
-
+```bash
 * alias psmem="ps auxf | sort -nr -k 4"
 * alias psmem10="ps auxf | sort -nr -k 4 | head -10"
-
+```
 __# Get top process eating cpu__
-
+```bash
 * alias pscpu="ps auxf | sort -nr -k 3"
 * alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
-
+```
 __# Get details of a process__
+```bash
 * alias paux='ps aux | grep'
-
+```
 __# Get server cpu info__
-
+```bash
 * alias cpuinfo="lscpu"
-
+```
 __# Older system use /proc/cpuinfo__
-
+```bash
 * alias cpuinfo="less /proc/cpuinfo"
-
+```
 __# Get GPU ram on desktop / laptop__
-
+```bash
 * alias gpumeminfo="grep -i --color memory /var/log/Xorg.0.log"
-
+```
 __# Resume wget by default__
-
+```bash
 * alias wget="wget -c"
-
+```
 __# Grabs the disk usage in the current directory__
-
+```bash
 * alias usage='du -ch | grep total'
-
+```
 __# Gets the total disk usage on your machine__
-
+```bash
 * alias totalusage='df -hl --total | grep total'
-
+```
 __# Shows the individual partition usages without the temporary memory values__
-
+```bash
 * alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
-
+```
 __# Gives you what is using the most space. Both directories and files. Varies on current directory__
-
+```bash
 * alias most='du -hsx * | sort -rh | head -10'
-
+```
 __# MacOs commands__
-
+```bash
 * alias rp='. ~/.bash_profile'
 * alias myip='ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2'
+```
