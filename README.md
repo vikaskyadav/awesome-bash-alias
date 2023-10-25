@@ -103,7 +103,7 @@ __# Docker commands__
 * alias dkd="sudo docker run -d -P"
 * alias dki="sudo docker run -i -t -P"
 * alias dex="sudo docker exec -i -t"
-* alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
+* alias drmf="sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)"
 
 __# Estimate file space usage to maximum depth__
 
