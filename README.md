@@ -11,6 +11,7 @@ __# Clear__
 * alias cl="clear"
 * alias ckear="clear"
 * alias clr="clear"
+* alias clera="clear"
 
 __# Change Directories__
 * alias .="cd .."
