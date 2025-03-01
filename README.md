@@ -18,6 +18,8 @@ __# Change Directories__
 * alias ...="cd ../../.."
 * alias ....="cd ../../../.."
 * alias .....="cd ../../../../.."
+* alias ~="cd ~"
+* alias -- -="cd -"
 
 ### OR
 
