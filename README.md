@@ -72,7 +72,7 @@ __# useful Docker functions__
 * alias dock-stop() { sudo docker stop $(docker ps -a -q); }
 * alias dock-rm()   { sudo docker rm $(docker ps -a -q); }
 
-* lias dock-do() {
+* alias dock-do() {
    if [ "$#" -ne 1 ]; then
       echo "Usage: $0 start|stop|pause|unpause|<any valid docker cmd>"
    fi
