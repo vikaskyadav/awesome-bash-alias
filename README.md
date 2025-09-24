@@ -163,12 +163,15 @@ __# List commands__
 * alias la="ls -a"
 * alias ll="ls -al"
 
-__# Ping Commands__
+__# Networking Commands__
 
 * alias pg="ping google.com -c 5"
 * alias pt="ping facebook.com -c 5"
 * alias ping="ping -c 5"
 * alias fastping="ping -c 100 -s.2"
+* alias myip="curl ifconfig.me"
+* alias ports="sudo lsof -i -P -n | grep LISTEN"
+* alias pingg="ping 8.8.8.8 -c 5"
 
 __# Exit Command__
 
