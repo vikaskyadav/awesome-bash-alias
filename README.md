@@ -1,18 +1,18 @@
-# awesome-bash-alias
+# Awesome-Bash-Alias
 A curated list of awesome Bash aliases.
 
 Website: https://vikaskyadav.github.io/awesome-bash-alias/
 
-__# Calculator__
+__# 🧮 Calculator__
 * alias bc="bc -l"
 
-__# Clear__
+__# 🧹 Clear__
 * alias c="clear"
 * alias cl="clear"
 * alias ckear="clear"
 * alias clr="clear"
 
-__# Change Directories__
+__# 📂 Change Directories__
 * alias .="cd .."
 * alias ..="cd ../.."
 * alias ...="cd ../../.."
