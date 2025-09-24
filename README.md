@@ -66,6 +66,10 @@ __# useful Docker functions__
 * alias dkd="sudo docker run -d -P"
 * alias dki="sudo docker run -i -t -P"
 * alias dex="sudo docker exec -i -t"
+* alias dstop="docker stop \$(docker ps -q)"        # stop all
+* alias drm="docker rm \$(docker ps -a -q)"         # remove all containers
+* alias dclean="docker system prune -af"            # clean system
+* alias dlog="docker logs -f"                       # follow logs
 * alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
 * alias dock-run()  { sudo docker run -i -t --privileged $@ ;}
 * alias dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
@@ -212,6 +216,16 @@ __# System state__
 * alias flighton='sudo rfkill block all'
 * alias flightoff='sudo rfkill unblock all'
 * alias snr='sudo service network-manager restart'
+
+__# System and File Management__
+
+* alias dfh="df -h"                     # human-readable disk usage
+* alias duh="du -h --max-depth=1"       # dir usage
+* alias md="mkdir -p"                   # safe mkdir
+* alias rd="rmdir"                      # remove dir
+* alias cls="clear && ls -lh"           # clear + list
+* alias reload="source ~/.bashrc"       # reload bashrc
+
 
 __# Show open ports__
 * alias ports='sudo netstat -tulanp'
