@@ -51,6 +51,12 @@ __# Change Directories__
 * alias cd4="cd ../../../.."
 * alias cd5="cd ../../../../.."
 
+__# Package Management__
+
+* alias update="sudo apt update && sudo apt upgrade -y"
+* alias remove="sudo apt remove"
+* alias yum-update="sudo yum update -y"
+
 __# useful Docker functions__
 
 * alias dl="sudo docker ps -l -q"
