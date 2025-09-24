@@ -53,18 +53,26 @@ __# Change Directories__
 
 __# useful Docker functions__
 
-* dock-run()  { sudo docker run -i -t --privileged $@ ;}
-* dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
-* dock-log()  { sudo docker logs --tail=all -f $@ ;}
-* dock-port() { sudo docker port $@ ;}
-* dock-vol()  { sudo docker inspect --format '{{ .Volumes }}' $@ ;}
-* dock-ip()   { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
-* dock-rmc()  { sudo docker rm `sudo docker ps -qa --filter 'status=exited'` ;}
-* dock-rmi()  { sudo docker rmi -f `sudo docker images | grep '^<none>' | awk '{print $3}'` ;}
-* dock-stop() { sudo docker stop $(docker ps -a -q); }
-* dock-rm()   { sudo docker rm $(docker ps -a -q); }
+* alias dl="sudo docker ps -l -q"
+* alias dps="sudo docker ps"
+* alias di="sudo docker images"
+* alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+* alias dkd="sudo docker run -d -P"
+* alias dki="sudo docker run -i -t -P"
+* alias dex="sudo docker exec -i -t"
+* alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
+* alias dock-run()  { sudo docker run -i -t --privileged $@ ;}
+* alias dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
+* alias dock-log()  { sudo docker logs --tail=all -f $@ ;}
+* alias dock-port() { sudo docker port $@ ;}
+* alias dock-vol()  { sudo docker inspect --format '{{ .Volumes }}' $@ ;}
+* alias dock-ip()   { sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $@ ;}
+* alias dock-rmc()  { sudo docker rm `sudo docker ps -qa --filter 'status=exited'` ;}
+* alias dock-rmi()  { sudo docker rmi -f `sudo docker images | grep '^<none>' | awk '{print $3}'` ;}
+* alias dock-stop() { sudo docker stop $(docker ps -a -q); }
+* alias dock-rm()   { sudo docker rm $(docker ps -a -q); }
 
-*dock-do() {
+* lias dock-do() {
    if [ "$#" -ne 1 ]; then
       echo "Usage: $0 start|stop|pause|unpause|<any valid docker cmd>"
    fi
@@ -94,16 +102,7 @@ __# Kubernetes commands__
 * alias kpv="kubectl get pv"
 * alias kpvc="kubectl get pvc"
 
-__# Docker commands__
 
-* alias dl="sudo docker ps -l -q"
-* alias dps="sudo docker ps"
-* alias di="sudo docker images"
-* alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-* alias dkd="sudo docker run -d -P"
-* alias dki="sudo docker run -i -t -P"
-* alias dex="sudo docker exec -i -t"
-* alias drmf='sudo docker stop $(sudo docker ps -a -q) && sudo docker rm $(sudo docker ps -a -q)'
 
 __# Estimate file space usage to maximum depth__
 
