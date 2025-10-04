@@ -71,13 +71,13 @@ __# 📂 Change Directories__
 * alias cd4="cd ../../../.."
 * alias cd5="cd ../../../../.."
 
-__# Package Management__
+__# 📦 Package Management__
 
 * alias update="sudo apt update && sudo apt upgrade -y"
 * alias remove="sudo apt remove"
 * alias yum-update="sudo yum update -y"
 
-__# useful Docker functions__
+__# 🐳 Useful Docker functions__
 
 * alias dl="sudo docker ps -l -q"
 * alias dps="sudo docker ps"
@@ -113,7 +113,7 @@ __# useful Docker functions__
    done
 }
 
-__# Kubernetes commands__
+__# ☸️ Kubernetes commands__
 
 * alias k="kubectl"
 * alias ka="kubectl apply -f"
@@ -134,11 +134,11 @@ __# Kubernetes commands__
 
 
 
-__# Estimate file space usage to maximum depth__
+__# 📊 Estimate file space usage to maximum depth__
 
 * alias du1="du -d 1"
 
-__# Git commands__
+__# 🧰 Git commands__
 
 * alias gs="git status"
 * alias gst="git status -sb"
@@ -167,7 +167,7 @@ __# Git commands__
 * alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 * alias nah="git clean -df && git checkout -- ."
 
-__# History commands__
+__# 📜 History commands__
 
 * alias h="history"
 * alias h1="history 10"
